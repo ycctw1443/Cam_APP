@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ShareCam
 //
-//  Created by 和田絢也 on 2015/09/14.
+//  Created by ycctw1443 on 2015/09/14.
 //  Copyright (c) 2015年 ycctw1443. All rights reserved.
 //
 

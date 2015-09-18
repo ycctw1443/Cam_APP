@@ -13,6 +13,7 @@
 		B23B6BC21BA7056D0034590C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23B6BC11BA7056D0034590C /* Images.xcassets */; };
 		B23B6BC51BA7056D0034590C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B23B6BC31BA7056D0034590C /* LaunchScreen.xib */; };
 		B23B6BD11BA7056D0034590C /* ShareCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B6BD01BA7056D0034590C /* ShareCamTests.swift */; };
+		B23B6BDD1BA70BB80034590C /* LiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B23B6BDC1BA70BB80034590C /* LiveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		B23B6BCA1BA7056D0034590C /* ShareCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23B6BCF1BA7056D0034590C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B23B6BD01BA7056D0034590C /* ShareCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCamTests.swift; sourceTree = "<group>"; };
+		B23B6BDA1BA70BB80034590C /* ShareCam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareCam-Bridging-Header.h"; sourceTree = "<group>"; };
+		B23B6BDB1BA70BB80034590C /* LiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveView.h; sourceTree = "<group>"; };
+		B23B6BDC1BA70BB80034590C /* LiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				B23B6BC11BA7056D0034590C /* Images.xcassets */,
 				B23B6BC31BA7056D0034590C /* LaunchScreen.xib */,
 				B23B6BB81BA7056D0034590C /* Supporting Files */,
+				B23B6BDB1BA70BB80034590C /* LiveView.h */,
+				B23B6BDC1BA70BB80034590C /* LiveView.m */,
+				B23B6BDA1BA70BB80034590C /* ShareCam-Bridging-Header.h */,
 			);
 			path = ShareCam;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23B6BBD1BA7056D0034590C /* ViewController.swift in Sources */,
+				B23B6BDD1BA70BB80034590C /* LiveView.m in Sources */,
 				B23B6BBB1BA7056D0034590C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ShareCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareCam/ShareCam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ShareCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareCam/ShareCam-Bridging-Header.h";
 			};
 			name = Release;
 		};
